@@ -1,6 +1,7 @@
 sudo pacman -S \
     lightdm \
     lightdm-gtk-greeter \
+    arandr \
     i3-wm \
     i3status \
     dmenu \

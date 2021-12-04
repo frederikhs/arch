@@ -2,6 +2,11 @@
 
 `./postinstall.sh`
 
+
+## Setup screens
+
+`sudo nano /etc/lightdm/lightdm.conf`
+
 Insert:
 ```
 display-setup-script=xrandr --output DP-2 --primary --auto --right-of DP-5 --mode 2560x1440 --rate 165.00
