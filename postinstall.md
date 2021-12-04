@@ -1,14 +1,6 @@
-## Install some packages
-`sudo pacman -S i3-wm gnome-terminal lightdm lightdm-gtk-greeter dmenu chromium tree curl htop nano flameshot make jq git i3status --noconfirm`
+## Run postinstall.sh
 
-## Enable some packages
-`sudo systemctl enable lightdm`
-
-## Set cursor size (optional)
-`echo "Xcursor.size: 24" > ~/.Xresources`
-
-## Edit lighdm to set up monitors on boot
-`sudo nano /etc/lightdm/lightdm.conf`
+`./postinstall.sh`
 
 Insert:
 ```
