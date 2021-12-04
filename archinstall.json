@@ -1,0 +1,24 @@
+{
+    "audio": "pulseaudio",
+    "bootloader": "grub-install",
+    "gfx_driver": "Nvidia (proprietary)",
+    "kernels": [
+        "linux-lts"
+    ],
+    "keyboard-layout": "dk",
+    "mirror-region": "Denmark",
+    "nic": {
+        "NetworkManager": true
+    },
+    "htp": true,
+    "packages": [
+        "docker",
+        "git"
+    ],
+    "profile": "xorg",
+    "services": "docker",
+    "swap": true,
+    "sys-encoding": "utf-8",
+    "sys-language": "en_US",
+    "timezone": "Europe/Copenhagen"
+}
