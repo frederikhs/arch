@@ -15,6 +15,8 @@ sudo pacman -S \
     make \
     jq \
     git \
+    code \
+    imwheel
     --noconfirm
 
 sudo systemctl enable lightdm
