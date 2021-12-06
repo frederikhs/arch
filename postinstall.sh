@@ -1,12 +1,24 @@
+#!/bin/bash
 set -e
 
+if [ $EUID -ne 0 ]; then
+    echo "$0 is not running as root. Try using sudo."
+    exit 2
+fi
+
 sudo pacman -S \
+    iwd \
+    openssh \
+    nm-connection-editor \
+    network-manager-applet \
     lightdm \
     lightdm-gtk-greeter \
     arandr \
     i3-wm \
     i3status \
+    i3lock \
     dmenu \
+    light \
     gnome-terminal \
     chromium \
     docker \
@@ -21,8 +33,6 @@ sudo pacman -S \
     git \
     code \
     imwheel \
-    iwd \
-    openssh \
     --noconfirm
 
 sudo systemctl enable lightdm
@@ -35,5 +45,8 @@ sudo systemctl enable containerd.service
 
 sudo groupadd docker || echo "ok"
 sudo usermod -aG docker fhs
+
+# Light post installation
+sudo usermod -a -G video fhs
 
 echo "Done"
