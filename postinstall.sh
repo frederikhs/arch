@@ -21,6 +21,8 @@ sudo pacman -S \
     git \
     code \
     imwheel \
+    iwd \
+    openssh \
     --noconfirm
 
 sudo systemctl enable lightdm
@@ -32,21 +34,6 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
 sudo groupadd docker || echo "ok"
-sudo usermod -aG docker $USER
+sudo usermod -aG docker fhs
 
-# Install snapd
-git clone https://aur.archlinux.org/snapd.git ~/snapd || echo "snapd already cloned"
-(cd ~/snapd && makepkg -s --noconfirm) || ERROR_CODE=$?
-if [ "${ERROR_CODE}" -ne 13 ]; then
-    echo "something bad happened"
-    exit "${ERROR_CODE}"
-fi
-
-(cd ~/snapd && sudo pacman -U snapd-*-x86_64.pkg.tar.zst --noconfirm)
-
-sudo systemctl enable snapd
-
-# Install spotify
-sudo snap install spotify
-
-echo "Done, now reboot for snapd and docker without sudo to work"
+echo "Done"
