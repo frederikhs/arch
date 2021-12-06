@@ -1,0 +1,21 @@
+{
+    "audio": "pulseaudio",
+    "bootloader": "grub-install",
+    "kernels": [
+        "linux-lts"
+    ],
+    "keyboard-layout": "dk",
+    "mirror-region": "Denmark",
+    "nic": {
+        "NetworkManager": true
+    },
+    "ntp": true,
+    "packages": [
+        "git"
+    ],
+    "profile": "xorg",
+    "swap": true,
+    "sys-encoding": "utf-8",
+    "sys-language": "en_US",
+    "timezone": "Europe/Copenhagen"
+}
