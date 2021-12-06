@@ -11,7 +11,8 @@
     },
     "ntp": true,
     "packages": [
-        "git"
+        "git",
+	"iwd"
     ],
     "profile": "xorg",
     "swap": true,
