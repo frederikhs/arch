@@ -33,6 +33,8 @@ sudo pacman -S \
     git \
     code \
     imwheel \
+    fuse \
+    openvpn \
     --noconfirm
 
 sudo systemctl enable lightdm
