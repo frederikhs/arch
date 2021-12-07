@@ -38,6 +38,8 @@ sudo pacman -S \
     fuse \
     openvpn \
     bash-completion \
+    peek \
+    nautilus \
     --noconfirm
 
 sudo systemctl enable lightdm
