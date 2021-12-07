@@ -19,6 +19,8 @@ sudo pacman -S \
     i3lock \
     dmenu \
     light \
+    man-db \
+    nitrogen \
     gnome-terminal \
     chromium \
     docker \
