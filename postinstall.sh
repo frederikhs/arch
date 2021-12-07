@@ -37,6 +37,7 @@ sudo pacman -S \
     imwheel \
     fuse \
     openvpn \
+    bash-completion \
     --noconfirm
 
 sudo systemctl enable lightdm
