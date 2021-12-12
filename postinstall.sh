@@ -40,6 +40,10 @@ sudo pacman -S \
     bash-completion \
     peek \
     nautilus \
+    ttf-dejavu \
+    ttf-liberation \
+    noto-fonts \
+    noto-fonts-emoji \
     --noconfirm
 
 sudo systemctl enable lightdm
