@@ -19,6 +19,7 @@ sudo pacman -S \
     i3lock \
     dmenu \
     light \
+    dunst \
     man-db \
     nitrogen \
     gnome-terminal \

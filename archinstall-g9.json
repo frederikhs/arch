@@ -12,7 +12,7 @@
     "ntp": true,
     "packages": [
         "git",
-	"iwd"
+	    "iwd"
     ],
     "profile": "xorg",
     "swap": true,
