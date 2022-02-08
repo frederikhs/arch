@@ -9,6 +9,7 @@ fi
 sudo pacman -S \
     iwd \
     openssh \
+    inetutils \
     nm-connection-editor \
     network-manager-applet \
     lightdm \
