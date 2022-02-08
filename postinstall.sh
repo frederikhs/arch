@@ -27,6 +27,7 @@ sudo pacman -S \
     docker-compose \
     tree \
     curl \
+    wget \
     htop \
     nano \
     flameshot \
