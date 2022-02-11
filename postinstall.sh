@@ -48,6 +48,8 @@ sudo pacman -S \
     ttf-liberation \
     noto-fonts \
     noto-fonts-emoji \
+    zip \
+    unzip \
     --noconfirm
 
 sudo systemctl enable lightdm
