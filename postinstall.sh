@@ -50,6 +50,7 @@ sudo pacman -S \
     noto-fonts-emoji \
     zip \
     unzip \
+    pulsemixer \
     --noconfirm
 
 sudo systemctl enable lightdm
