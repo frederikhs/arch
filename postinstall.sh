@@ -12,6 +12,7 @@ sudo pacman -S \
     inetutils \
     nm-connection-editor \
     network-manager-applet \
+    bluez \
     sof-firmware \
     lightdm \
     lightdm-gtk-greeter \
