@@ -25,7 +25,7 @@ sudo pacman -S \
     dunst \
     man-db \
     nitrogen \
-    gnome-terminal \
+    alacritty \
     chromium \
     docker \
     docker-compose \
