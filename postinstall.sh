@@ -47,6 +47,7 @@ sudo pacman -S \
     nautilus \
     ttf-dejavu \
     ttf-liberation \
+    ttf-font-awesome \
     noto-fonts \
     noto-fonts-emoji \
     zip \
