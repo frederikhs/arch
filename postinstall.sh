@@ -53,6 +53,8 @@ sudo pacman -S \
     zip \
     unzip \
     pulsemixer \
+    net-tools \
+    dnsutils \
     --noconfirm
 
 sudo systemctl enable lightdm
