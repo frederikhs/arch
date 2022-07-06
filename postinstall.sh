@@ -55,6 +55,7 @@ sudo pacman -S \
     pulsemixer \
     net-tools \
     dnsutils \
+    speedtest-cli \
     --noconfirm
 
 sudo systemctl enable lightdm
