@@ -72,4 +72,7 @@ sudo usermod -aG docker fhs
 # Light post installation
 sudo usermod -a -G video fhs
 
+# Allow users to run nmcli assuming root
+sudo chmod +s /usr/bin/nmcli
+
 echo "Done"
