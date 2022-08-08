@@ -56,6 +56,7 @@ sudo pacman -S \
     net-tools \
     dnsutils \
     speedtest-cli \
+    keychain \
     --noconfirm
 
 sudo systemctl enable lightdm
