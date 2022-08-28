@@ -57,6 +57,8 @@ sudo pacman -S \
     dnsutils \
     speedtest-cli \
     keychain \
+    openresolv \
+    wireguard-tools \
     --noconfirm
 
 sudo systemctl enable lightdm
