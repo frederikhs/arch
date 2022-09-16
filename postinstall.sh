@@ -28,6 +28,7 @@ sudo pacman -S \
     alacritty \
     chromium \
     docker \
+    docker-buildx \
     docker-compose \
     tree \
     curl \
