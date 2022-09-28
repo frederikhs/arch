@@ -34,10 +34,11 @@ sudo pacman -S \
     curl \
     wget \
     htop \
-    nano \
+    vim
     flameshot \
     make \
     jq \
+    yq \
     git \
     code \
     imwheel \
