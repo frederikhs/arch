@@ -34,7 +34,7 @@ sudo pacman -S \
     curl \
     wget \
     htop \
-    vim
+    vim \
     flameshot \
     make \
     jq \
