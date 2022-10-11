@@ -61,6 +61,7 @@ sudo pacman -S \
     keychain \
     openresolv \
     wireguard-tools \
+    hey \
     --noconfirm
 
 sudo systemctl enable lightdm
