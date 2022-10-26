@@ -62,6 +62,7 @@ sudo pacman -S \
     openresolv \
     wireguard-tools \
     hey \
+    terraform \
     --noconfirm
 
 sudo systemctl enable lightdm
