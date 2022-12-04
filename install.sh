@@ -63,11 +63,12 @@ sudo pacman -S \
     wireguard-tools \
     hey \
     terraform \
+    spotify-launcher \
     --noconfirm
 
 sudo systemctl enable lightdm
 
-echo "Xcursor.size: 24" > ~/.Xresources
+echo "Xcursor.size: 24" > $HOME/.Xresources
 
 # Docker post installation
 sudo systemctl enable docker.service
@@ -81,5 +82,21 @@ sudo usermod -a -G video fhs
 
 # Allow users to run nmcli assuming root
 sudo chmod +s /usr/bin/nmcli
+
+# Install yay
+if [ ! -d "$HOME/yay" ]; then
+  sudo -u fhs git clone https://aur.archlinux.org/yay.git $HOME/yay
+  (cd $HOME/yay && sudo -u fhs git makepkg -si)
+else
+  echo "yay already installed"
+fi
+
+# Update everything
+sudo -u fhs yay -Sy
+
+# Install
+sudo -u fhs yay -S --noconfirm --noprovides --answerdiff=None --answerclean=None \
+ slack-desktop \
+ postman-bin
 
 echo "Done"
