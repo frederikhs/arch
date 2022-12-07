@@ -64,6 +64,7 @@ sudo pacman -S \
     hey \
     terraform \
     spotify-launcher \
+    go \
     --noconfirm
 
 sudo systemctl enable lightdm
