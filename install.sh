@@ -8,7 +8,7 @@ fi
 
 USERNAME=$(id -nu "$SUDO_UID")
 
-sudo pacman -Sy \
+sudo pacman -Syu \
     iwd \
     openssh \
     inetutils \
