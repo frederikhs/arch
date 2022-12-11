@@ -65,6 +65,7 @@ sudo pacman -S \
     terraform \
     spotify-launcher \
     go \
+    firewalld \
     --noconfirm
 
 sudo systemctl enable lightdm
@@ -89,7 +90,7 @@ if [ ! -d "$HOME/yay" ]; then
   sudo -u fhs git clone https://aur.archlinux.org/yay.git $HOME/yay
   (cd $HOME/yay && sudo -u fhs git makepkg -si)
 else
-  echo "yay already installed"
+  echo "yay already installed"a
 fi
 
 # Update everything
