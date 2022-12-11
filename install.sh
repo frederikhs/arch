@@ -68,6 +68,7 @@ sudo pacman -Sy \
     spotify-launcher \
     go \
     firewalld \
+    gedit \
     --noconfirm
 
 sudo systemctl enable lightdm
@@ -90,20 +91,22 @@ sudo usermod -a -G video "$USERNAME"
 # Allow users to run nmcli assuming root
 sudo chmod +s /usr/bin/nmcli
 
-# Install yay
-if [ ! -d "/home/$USERNAME/yay" ]; then
-  sudo -u "$USERNAME" git clone https://aur.archlinux.org/yay.git /home/"$USERNAME"/yay
-  (cd $HOME/yay && sudo -u "$USERNAME" git makepkg -si)
-else
-  echo "yay already installed"a
+if [ "$1" == "--yay" ]; then
+  # Install yay
+  if [ ! -d "/home/$USERNAME/yay" ]; then
+    sudo -u "$USERNAME" git clone https://aur.archlinux.org/yay.git "/home/$USERNAME/yay"
+    (cd "/home/$USERNAME/yay" && sudo -u "$USERNAME" git makepkg -si)
+  else
+    echo "yay already installed"a
+  fi
+
+  # Update everything
+  sudo -u "$USERNAME" yay -Sy
+
+  # Install
+  sudo -u "$USERNAME" yay -S --noconfirm --noprovides --answerdiff=None --answerclean=None \
+   slack-desktop \
+   postman-bin
 fi
-
-# Update everything
-sudo -u "$USERNAME" yay -Sy
-
-# Install
-sudo -u "$USERNAME" yay -S --noconfirm --noprovides --answerdiff=None --answerclean=None \
- slack-desktop \
- postman-bin
 
 echo "Done"
