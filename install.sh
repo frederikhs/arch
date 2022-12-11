@@ -6,6 +6,8 @@ if [ $EUID -ne 0 ]; then
     exit 2
 fi
 
+USERNAME=$(id -nu "$SUDO_UID")
+
 sudo pacman -S \
     iwd \
     openssh \
@@ -77,27 +79,27 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
 sudo groupadd docker || echo "ok"
-sudo usermod -aG docker fhs
+sudo usermod -aG docker "$USERNAME"
 
 # Light post installation
-sudo usermod -a -G video fhs
+sudo usermod -a -G video "$USERNAME"
 
 # Allow users to run nmcli assuming root
 sudo chmod +s /usr/bin/nmcli
 
 # Install yay
 if [ ! -d "$HOME/yay" ]; then
-  sudo -u fhs git clone https://aur.archlinux.org/yay.git $HOME/yay
-  (cd $HOME/yay && sudo -u fhs git makepkg -si)
+  sudo -u "$USERNAME" git clone https://aur.archlinux.org/yay.git $HOME/yay
+  (cd $HOME/yay && sudo -u "$USERNAME" git makepkg -si)
 else
   echo "yay already installed"a
 fi
 
 # Update everything
-sudo -u fhs yay -Sy
+sudo -u "$USERNAME" yay -Sy
 
 # Install
-sudo -u fhs yay -S --noconfirm --noprovides --answerdiff=None --answerclean=None \
+sudo -u "$USERNAME" yay -S --noconfirm --noprovides --answerdiff=None --answerclean=None \
  slack-desktop \
  postman-bin
 
