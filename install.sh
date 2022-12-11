@@ -8,7 +8,7 @@ fi
 
 USERNAME=$(id -nu "$SUDO_UID")
 
-sudo pacman -S \
+sudo pacman -Sy \
     iwd \
     openssh \
     inetutils \
@@ -81,6 +81,9 @@ sudo systemctl enable containerd.service
 sudo groupadd docker || echo "ok"
 sudo usermod -aG docker "$USERNAME"
 
+# Firewalld post installation
+sudo systemctl enable --now firewalld
+
 # Light post installation
 sudo usermod -a -G video "$USERNAME"
 
@@ -88,8 +91,8 @@ sudo usermod -a -G video "$USERNAME"
 sudo chmod +s /usr/bin/nmcli
 
 # Install yay
-if [ ! -d "$HOME/yay" ]; then
-  sudo -u "$USERNAME" git clone https://aur.archlinux.org/yay.git $HOME/yay
+if [ ! -d "/home/$USERNAME/yay" ]; then
+  sudo -u "$USERNAME" git clone https://aur.archlinux.org/yay.git /home/"$USERNAME"/yay
   (cd $HOME/yay && sudo -u "$USERNAME" git makepkg -si)
 else
   echo "yay already installed"a

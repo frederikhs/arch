@@ -10,6 +10,8 @@ sudo firewall-cmd --permanent --zone=home --add-service=http
 sudo firewall-cmd --permanent --zone=home --add-service=https
 sudo firewall-cmd --permanent --zone=home --add-service=ssh
 
+sudo firewall-cmd --permanent --zone=public --remove-service=ssh
+
 if [ "$(hostname)" == "rod" ]; then
   sudo firewall-cmd --set-default-zone=home
 elif [ "$(hostname)" == "g9" ]; then
