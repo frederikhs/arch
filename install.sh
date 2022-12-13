@@ -70,6 +70,7 @@ sudo pacman -Syu \
     firewalld \
     gedit \
     ansible \
+    traceroute \
     --noconfirm
 
 sudo systemctl enable lightdm
