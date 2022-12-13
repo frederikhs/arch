@@ -69,6 +69,7 @@ sudo pacman -Syu \
     go \
     firewalld \
     gedit \
+    ansible \
     --noconfirm
 
 sudo systemctl enable lightdm
