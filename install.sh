@@ -71,6 +71,9 @@ sudo pacman -Syu \
     gedit \
     ansible \
     traceroute \
+    rclone \
+    vlc \
+    eog \
     --noconfirm
 
 sudo systemctl enable lightdm
