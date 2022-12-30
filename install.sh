@@ -75,6 +75,7 @@ sudo pacman -Syu \
     vlc \
     eog \
     kubectl \
+    helm \
     --noconfirm
 
 sudo systemctl enable lightdm
