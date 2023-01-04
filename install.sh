@@ -74,6 +74,7 @@ sudo pacman -Syu \
     rclone \
     vlc \
     eog \
+    unrar \
     kubectl \
     helm \
     aws-cli-v2 \
