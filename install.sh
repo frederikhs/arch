@@ -76,6 +76,7 @@ sudo pacman -Syu \
     eog \
     kubectl \
     helm \
+    aws-cli-v2 \
     --noconfirm
 
 sudo systemctl enable lightdm
