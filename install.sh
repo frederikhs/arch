@@ -78,6 +78,7 @@ sudo pacman -Syu \
     kubectl \
     helm \
     aws-cli-v2 \
+    postgresql-client \
     --noconfirm
 
 sudo systemctl enable lightdm
