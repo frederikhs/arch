@@ -105,7 +105,7 @@ if [ "$1" == "--yay" ]; then
   # Install yay
   if [ ! -d "/home/$USERNAME/yay" ]; then
     sudo -u "$USERNAME" git clone https://aur.archlinux.org/yay.git "/home/$USERNAME/yay"
-    (cd "/home/$USERNAME/yay" && sudo -u "$USERNAME" git makepkg -si)
+    (cd "/home/$USERNAME/yay" && sudo -u "$USERNAME" makepkg -si)
   else
     echo "yay already installed"a
   fi
