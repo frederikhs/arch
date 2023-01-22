@@ -120,7 +120,8 @@ if [ "$1" == "--yay" ]; then
   sudo -u "$USERNAME" yay -S --noconfirm --noprovides --answerdiff=None --answerclean=None \
    amazon-ecr-credential-helper \
    slack-desktop \
-   postman-bin
+   postman-bin \
+   etcher-bin
 fi
 
 echo "Done"
