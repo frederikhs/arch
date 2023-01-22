@@ -92,6 +92,9 @@ sudo systemctl enable containerd.service
 sudo groupadd docker || echo "ok"
 sudo usermod -aG docker "$USERNAME"
 
+# use buildkit by default and set mtu to match Wireguard
+echo '{ "features": { "buildkit": true }, "mtu": 1420 }' | sudo tee /etc/docker/daemon.json
+
 # Firewalld post installation
 sudo systemctl enable --now firewalld
 
