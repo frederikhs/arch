@@ -118,6 +118,7 @@ if [ "$1" == "--yay" ]; then
 
   # Install
   sudo -u "$USERNAME" yay -S --noconfirm --noprovides --answerdiff=None --answerclean=None \
+   amazon-ecr-credential-helper \
    slack-desktop \
    postman-bin
 fi
