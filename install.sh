@@ -79,9 +79,13 @@ sudo pacman -Syu \
     helm \
     aws-cli-v2 \
     postgresql-client \
+    blueman \
+    bluez \
+    pulseaudio-bluetooth \
     --noconfirm
 
 sudo systemctl enable lightdm
+sudo systemctl enable bluetooth.service
 
 echo "Xcursor.size: 24" > $HOME/.Xresources
 
