@@ -82,6 +82,7 @@ sudo pacman -Syu \
     blueman \
     bluez \
     pulseaudio-bluetooth \
+    whois \
     --noconfirm
 
 sudo systemctl enable lightdm
