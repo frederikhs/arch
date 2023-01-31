@@ -65,6 +65,7 @@ sudo pacman -Syu \
     wireguard-tools \
     hey \
     terraform \
+    packer \
     spotify-launcher \
     go \
     firewalld \
