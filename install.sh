@@ -126,7 +126,8 @@ if [ "$1" == "--yay" ]; then
    amazon-ecr-credential-helper \
    slack-desktop \
    postman-bin \
-   etcher-bin
+   etcher-bin \
+   kail
 fi
 
 echo "Done"
