@@ -84,6 +84,8 @@ sudo pacman -Syu \
     bluez \
     pulseaudio-bluetooth \
     whois \
+    networkmanager-l2tp \
+    strongswan \
     --noconfirm
 
 sudo systemctl enable lightdm
