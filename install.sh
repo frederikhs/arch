@@ -42,7 +42,6 @@ sudo pacman -Syu \
     jq \
     yq \
     git \
-    code \
     imwheel \
     fuse \
     openvpn \
@@ -130,7 +129,8 @@ if [ "$1" == "--yay" ]; then
    slack-desktop \
    postman-bin \
    etcher-bin \
-   kail
+   kail \
+   visual-studio-code-bin
 fi
 
 echo "Done"
