@@ -18,6 +18,8 @@ sudo pacman -Syu \
     sof-firmware \
     lightdm \
     lightdm-gtk-greeter \
+    xorg-xrandr \
+    autorandr \
     arandr \
     i3-wm \
     i3status \
@@ -40,7 +42,6 @@ sudo pacman -Syu \
     flameshot \
     make \
     jq \
-    yq \
     git \
     imwheel \
     fuse \
