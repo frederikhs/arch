@@ -86,6 +86,7 @@ sudo pacman -Syu \
     whois \
     networkmanager-l2tp \
     strongswan \
+    rofi \
     --noconfirm
 
 sudo systemctl enable lightdm
