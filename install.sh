@@ -130,7 +130,6 @@ if [ "$1" == "--yay" ]; then
    amazon-ecr-credential-helper \
    slack-desktop \
    postman-bin \
-   etcher-bin \
    kail \
    visual-studio-code-bin
 fi
