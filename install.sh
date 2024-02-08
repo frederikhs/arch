@@ -87,6 +87,7 @@ sudo pacman -Syu \
     networkmanager-l2tp \
     strongswan \
     rofi \
+    gnome-disk-utility \
     --noconfirm
 
 sudo systemctl enable lightdm
