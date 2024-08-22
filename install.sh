@@ -25,7 +25,6 @@ sudo pacman -Syu \
     i3status \
     i3lock \
     dmenu \
-    light \
     dunst \
     man-db \
     nitrogen \
@@ -56,7 +55,6 @@ sudo pacman -Syu \
     noto-fonts-emoji \
     zip \
     unzip \
-    pulsemixer \
     net-tools \
     dnsutils \
     speedtest-cli \
@@ -72,13 +70,11 @@ sudo pacman -Syu \
     gedit \
     ansible \
     traceroute \
-    rclone \
     vlc \
     eog \
     unrar \
     kubectl \
     helm \
-    aws-cli-v2 \
     postgresql-client \
     blueman \
     bluez \
@@ -86,8 +82,8 @@ sudo pacman -Syu \
     whois \
     networkmanager-l2tp \
     strongswan \
-    rofi \
     gnome-disk-utility \
+    gum \
     --noconfirm
 
 sudo systemctl enable lightdm
@@ -103,6 +99,7 @@ sudo groupadd docker || echo "ok"
 sudo usermod -aG docker "$USERNAME"
 
 # use buildkit by default and set mtu to match Wireguard
+mkdir -p /etc/docker
 echo '{ "features": { "buildkit": true }, "mtu": 1420 }' | sudo tee /etc/docker/daemon.json
 
 # Firewalld post installation
@@ -127,12 +124,10 @@ if [ "$1" == "--yay" ]; then
   sudo -u "$USERNAME" yay -Sy
 
   # Install
-  sudo -u "$USERNAME" yay -S --noconfirm --noprovides --answerdiff=None --answerclean=None \
+  sudo -u "$USERNAME" yay -S --noconfirm --answerdiff=None --answerclean=None \
+   aws-cli-v2 \
    amazon-ecr-credential-helper \
-   slack-desktop \
-   postman-bin \
-   kail \
-   visual-studio-code-bin
+   slack-desktop
 fi
 
 echo "Done"
