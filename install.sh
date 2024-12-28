@@ -61,7 +61,6 @@ sudo pacman -Syu \
     keychain \
     openresolv \
     wireguard-tools \
-    hey \
     terraform \
     packer \
     spotify-launcher \
@@ -78,7 +77,6 @@ sudo pacman -Syu \
     postgresql-client \
     blueman \
     bluez \
-    pulseaudio-bluetooth \
     whois \
     networkmanager-l2tp \
     strongswan \
@@ -87,7 +85,6 @@ sudo pacman -Syu \
     --noconfirm
 
 sudo systemctl enable lightdm
-sudo systemctl enable bluetooth.service
 
 echo "Xcursor.size: 24" > $HOME/.Xresources
 
